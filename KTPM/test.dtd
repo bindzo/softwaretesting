@@ -1,0 +1,11 @@
+<!ELEMENT dataset (
+        PRODUCT*)>
+
+<!ELEMENT PRODUCT EMPTY>
+<!ATTLIST PRODUCT
+    id CDATA #REQUIRED
+    name CDATA #REQUIRED
+    price CDATA #REQUIRED
+    amount CDATA #REQUIRED
+    description CDATA #REQUIRED
+>

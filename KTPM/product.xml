@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataset>
-    <PRODUCT id='1' name='laptop' price='1566000'  amount='6' description='Laptop' />
 
-    <PRODUCT id='2' name='television' price='2452000' amount="9" description='TV' />
-
-    <PRODUCT id='3' name='car'  price='715462000' amount="10" description='Car' />
 </dataset>

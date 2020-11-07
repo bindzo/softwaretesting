@@ -14,6 +14,7 @@ import org.dbunit.dataset.xml.FlatXmlDataSetBuilder;
 import org.dbunit.operation.DatabaseOperation;
 import org.junit.Test;
 
+
 public class DbUnit extends DBTestCase {
     private  Connection conn = null;
     private  Statement stmt = null;
@@ -72,6 +73,24 @@ public class DbUnit extends DBTestCase {
     }
     @Test
     public void testByName() throws SQLException {
+        int id = 1;
+        String actual = null;
+        String expect = "laptop"; // tên giả định mong muốn
+        stmt = conn.createStatement();
+        String sql = "SELECT name FROM product where id="+ Integer.toString(id);
+        ResultSet rs = stmt.executeQuery(sql);
+        while(rs.next()){
+            actual = rs.getString("name");
+        }
+        rs.close();
+
+        System.out.println("Expect : "+expect+" , Actual : "+ actual);
+        assertThat(actual, is(expect));
+        System.out.println("Hoàn thành test name");
+    }
+
+    @Test
+    public void testPerfomance() throws SQLException {
         int id = 1;
         String actual = null;
         String expect = "laptop"; // tên giả định mong muốn
